@@ -7,20 +7,24 @@ void main() {
   );
 }
 
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:3532197467.
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:3532197467.
+class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Application"),elevation: 12,),
-      body: Center(
-        child: Text("Bonjour le monde"),
-      ),
+      appBar: AppBar(title: Text("Application"), elevation: 12),
+      body: Center(child: Text("Bonjour le mondes")),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        child: Icon(Icons.add),  
+        onPressed: () {},
+        child: Icon(Icons.add),
       ),
     );
   }
